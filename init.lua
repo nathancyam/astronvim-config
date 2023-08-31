@@ -69,6 +69,34 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+    local lspconfig = require("lspconfig")
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+    lspconfig.tailwindcss.setup({
+      capabilities = capabilities,
+      filetypes = { "html", "elixir", "eelixir", "heex" },
+      init_options = {
+        userLanguages = {
+          elixir = "html-eex",
+          eelixir = "html-eex",
+          heex = "html-eex",
+        },
+      },
+      settings = {
+        tailwindCSS = {
+          experimental = {
+            classRegex = {
+              'class[:]\\s*"([^"]*)"',
+            },
+          },
+        },
+      },
+    })
+
+    lspconfig.emmet_ls.setup({
+      capabilities = capabilities,
+      filetypes = { "html", "css", "elixir", "eelixir", "heex" },
+    })
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
