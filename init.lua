@@ -50,7 +50,16 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      -- "pyright"
+      "lexical"
+    },
+    config = {
+      lexical = function()
+        return {
+          cmd = {"/Users/nathanyam/tools/lexical/_build/dev/package/lexical/bin/start_lexical.sh"},
+          filetypes = { "elixir", "eelixir", "heex" },
+          root_dir = require("lspconfig.util").root_pattern("mix.exs")
+        }
+      end,
     },
   },
 
@@ -74,6 +83,8 @@ return {
 
     lspconfig.tailwindcss.setup({
       capabilities = capabilities,
+      root_dir = lspconfig.util.root_pattern('tailwind.config.js', 'tailwind.config.ts', 'postcss.config.js',
+      'postcss.config.ts', 'package.json', 'node_modules', '.git', 'mix.exs'),
       filetypes = { "html", "elixir", "eelixir", "heex" },
       init_options = {
         userLanguages = {
