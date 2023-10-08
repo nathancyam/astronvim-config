@@ -54,8 +54,10 @@ return {
     },
     config = {
       lexical = function()
+        local home = os.getenv("HOME")
+
         return {
-          cmd = {"/Users/nathanyam/tools/lexical/_build/dev/package/lexical/bin/start_lexical.sh"},
+          cmd = {home .. "/tools/lexical/_build/dev/package/lexical/bin/start_lexical.sh"},
           filetypes = { "elixir", "eelixir", "heex" },
           root_dir = require("lspconfig.util").root_pattern("mix.exs")
         }
