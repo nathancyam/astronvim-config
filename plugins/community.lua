@@ -9,5 +9,9 @@ return {
     "github/copilot.vim",
     lazy = false,
   },
+  {
+    "tpope/vim-projectionist",
+    lazy = false,
+  },
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
 }
