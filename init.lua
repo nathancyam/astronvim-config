@@ -109,10 +109,11 @@ return {
       },
     })
 
-    lspconfig.emmet_ls.setup({
-      capabilities = capabilities,
-      filetypes = { "html", "css", "elixir", "eelixir", "heex" },
-    })
+    -- lspconfig.emmet_ls.setup({
+    --   capabilities = capabilities,
+    --   filetypes = { "html", "css", "elixir", "eelixir", "heex" },
+    -- })
+
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
