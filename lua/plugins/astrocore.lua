@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -77,8 +75,8 @@ return {
       },
       i = {
         ["<F1>"] = { "copilot#Accept('<CR>')", noremap = true, silent = true, expr = true, replace_keycodes = false },
-        ["<F2>"] = { 'copilot#Next()', silent = true, expr = true },
-        ["<F3>"] = { 'copilot#Previous()', silent = true, expr = true },
+        ["<F2>"] = { "copilot#Next()", silent = true, expr = true },
+        ["<F3>"] = { "copilot#Previous()", silent = true, expr = true },
       },
     },
   },
