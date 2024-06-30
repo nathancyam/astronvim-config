@@ -10,6 +10,7 @@ return {
   { import = "astrocommunity.pack.lua" },
   -- import/override with your plugins folder
   { import = "astrocommunity.colorscheme.kanagawa-nvim" },
+  { import = "astrocommunity.pack.tailwindcss" },
   {
     "github/copilot.vim",
     lazy = false,

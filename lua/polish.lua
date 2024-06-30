@@ -34,6 +34,13 @@ lspconfig.tailwindcss.setup({
   },
   settings = {
     tailwindCSS = {
+      includeLanguages = {
+        ["html-eex"] = "html",
+        ["phoenix-heex"] = "html",
+        elixir = "html",
+        eelixir = "html",
+        heex = "html",
+      },
       experimental = {
         classRegex = {
           'class[:]\\s*"([^"]*)"',
