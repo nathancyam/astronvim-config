@@ -17,13 +17,21 @@ vim.filetype.add {
   },
 }
 
-local lspconfig = require("lspconfig")
+local lspconfig = require "lspconfig"
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
-lspconfig.tailwindcss.setup({
+lspconfig.tailwindcss.setup {
   capabilities = capabilities,
-  root_dir = lspconfig.util.root_pattern('tailwind.config.js', 'tailwind.config.ts', 'postcss.config.js',
-  'postcss.config.ts', 'package.json', 'node_modules', '.git', 'mix.exs'),
+  root_dir = lspconfig.util.root_pattern(
+    "tailwind.config.js",
+    "tailwind.config.ts",
+    "postcss.config.js",
+    "postcss.config.ts",
+    "package.json",
+    "node_modules",
+    ".git",
+    "mix.exs"
+  ),
   filetypes = { "html", "elixir", "eelixir", "heex" },
   init_options = {
     userLanguages = {
@@ -48,4 +56,4 @@ lspconfig.tailwindcss.setup({
       },
     },
   },
-})
+}

@@ -11,6 +11,8 @@ return {
       "lua",
       "vim",
       "elixir",
+      "heex",
+      "eex",
       -- add more arguments for adding more treesitter parsers
     })
   end,
