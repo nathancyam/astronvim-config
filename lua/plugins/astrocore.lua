@@ -68,6 +68,10 @@ return {
         ["<Leader>b"] = { desc = "Buffers" },
         -- quick save
         -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+        ["<LocalLeader>t"] = { ":TestNearest<cr>", desc="Test Nearest" },
+        ["<LocalLeader>T"] = { ":TestFile<cr>", desc="Test File" },
+        ["<LocalLeader>a"] = { ":TestSuite<cr>", desc="Test Suite" },
+        ["<LocalLeader>l"] = { ":TestLast<cr>", desc="Test Last" },
       },
       t = {
         -- setting a mapping to false will disable it

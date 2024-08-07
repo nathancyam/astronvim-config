@@ -33,7 +33,12 @@ return {
     end,
     lazy = false,
   },
-  {"vim-test/vim-test"},
+  {
+    "vim-test/vim-test",
+    config = function()
+      vim.g["test#strategy"] = "neovim"
+    end,
+  },
   {
     "kndndrj/nvim-dbee",
     dependencies = {
